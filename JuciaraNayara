@@ -1,0 +1,42 @@
+var x = 100;
+var y = 100;
+var rx = 100;
+var ry = 100;
+var vidas = 3;
+var pontos = 0;
+function setup() {
+  createCanvas(400,400);
+}
+
+function draw() {
+  
+  background(0);
+  fill(75,0,130);
+  
+  if (keyIsDown(37))
+    x-=5;
+
+  if (keyIsDown(39))
+    x+=5;
+
+  if (keyIsDown(38))
+    y-=5;
+
+  if (keyIsDown(40))
+    y+=5;
+	
+   ellipse(x,y, 40, 40);
+
+  
+  fill(255,0,255);
+  rect(rx, ry, 55, 55);
+  rx +=5;
+  ry++;
+  
+   textSize(15);
+  text("Vidas:" + vidas,10,30)
+  text("Ponto:"+ pontos,10,60);
+    fill(75,0,130);
+   fill(0,102,153,51);
+  
+}
